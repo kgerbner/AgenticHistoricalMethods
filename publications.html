@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications &amp; CV · Agentic Historical Methods</title>
+  <meta name="description" content="Publications, talks, and CV." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="publications">
+  <div id="ambient-canvas" aria-hidden="true"></div>
+  <div data-include="nav"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Scholarship 📖</span>
+        <h1>Publications &amp; CV</h1>
+        <p class="lead">A selection of books, articles, and talks. <em>(Edit <code>data/publications.json</code> to update this list.)</em></p>
+        <p><a class="btn btn--ghost" href="assets/cv.pdf">⬇️ Download full CV (PDF)</a></p>
+
+        <div id="pub-list" style="margin-top:2rem;">
+          <p class="lead">Loading publications…</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/sketch-ambient.js"></script>
+  <script defer src="js/cursor-trail.js"></script>
+  <script defer src="js/components.js"></script>
+  <script defer src="js/publications.js"></script>
+</body>
+</html>

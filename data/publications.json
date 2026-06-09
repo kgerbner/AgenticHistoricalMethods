@@ -1,0 +1,34 @@
+[
+  {
+    "type": "book",
+    "title": "Your Book Title Here",
+    "authors": "Your Name",
+    "venue": "University Press",
+    "year": 2024,
+    "url": ""
+  },
+  {
+    "type": "article",
+    "title": "An Article About Digital History",
+    "authors": "Your Name",
+    "venue": "Journal of Digital Humanities",
+    "year": 2025,
+    "url": ""
+  },
+  {
+    "type": "article",
+    "title": "Reading the Archive with AI: Methods and Cautions",
+    "authors": "Your Name, Co-Author",
+    "venue": "Some Edited Volume",
+    "year": 2023,
+    "url": ""
+  },
+  {
+    "type": "talk",
+    "title": "Agentic Methods for Historians (keynote)",
+    "authors": "Your Name",
+    "venue": "Digital Humanities Conference",
+    "year": 2025,
+    "url": ""
+  }
+]

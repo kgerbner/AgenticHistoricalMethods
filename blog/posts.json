@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Hello, World: Starting an Agentic History Blog",
+    "slug": "2026-06-09-hello-world",
+    "date": "2026-06-09",
+    "excerpt": "Why I'm writing about Claude, archives, and the everyday craft of historical research.",
+    "tags": ["meta", "intro"]
+  },
+  {
+    "title": "Transcribing a 17th-Century Letter with Claude",
+    "slug": "2026-05-20-transcribing-a-letter",
+    "date": "2026-05-20",
+    "excerpt": "A walkthrough of using Claude to help read difficult secretary-hand handwriting — and how I verified every line.",
+    "tags": ["tutorial", "paleography", "primary sources"]
+  }
+]

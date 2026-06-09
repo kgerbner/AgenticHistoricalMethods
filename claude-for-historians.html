@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claude for Historians · Agentic Historical Methods</title>
+  <meta name="description" content="How historians can use Claude as research support: use cases, best practices, and the ethics and limitations that matter for scholarship." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="claude">
+  <div id="ambient-canvas" aria-hidden="true"></div>
+  <div data-include="nav"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">The centerpiece 📜</span>
+        <h1>Claude for Historians</h1>
+        <p class="lead">A practical, honest look at bringing Claude into historical research — what it's genuinely good for, how to do it rigorously, and where it must not be trusted.</p>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container reveal">
+        <h2>Why Claude for historical research?</h2>
+        <p>Historians spend enormous effort on tasks that are necessary but not, in themselves, the argument: deciphering handwriting, translating, skimming for relevance, formatting citations, reorganizing notes. A capable language model can take the first pass on much of this — fast, tireless, and available at 2am — leaving you more time for the interpretive work only you can do.</p>
+        <p>The key framing for everything below: <strong>Claude is a research assistant, not an authority.</strong> It drafts; you decide. It suggests; you verify. Used that way, it's a genuine multiplier. Used credulously, it will confidently invent a citation that does not exist.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Use cases 🧰</h2>
+        <p class="lead">Concrete ways historians are putting Claude to work.</p>
+        <div class="grid" style="margin-top:2rem;">
+          <div class="card reveal">
+            <span class="card__icon">✍️</span>
+            <h3>Transcription &amp; paleography</h3>
+            <p>Get a first-pass transcription of difficult handwriting or printed text, then correct against the image. Especially handy for secretary hand and abbreviations.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon">🌍</span>
+            <h3>Translation</h3>
+            <p>Draft translations of sources in languages you read slowly — then refine. Ask Claude to flag ambiguous or archaic terms for your judgment.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon">🔎</span>
+            <h3>Primary-source analysis</h3>
+            <p>Summarize long documents, extract names/dates/places into a table, or compare rhetoric across a set of sources to spot patterns worth a closer read.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon">📚</span>
+            <h3>Literature synthesis</h3>
+            <p>Organize and summarize <em>readings you provide</em>, map historiographical debates, and draft a literature review you'll then sharpen and verify.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon">💡</span>
+            <h3>Brainstorming &amp; drafting</h3>
+            <p>Rubber-duck arguments, generate counter-readings, outline a chapter, or rework a clunky paragraph. A tireless interlocutor for thinking out loud.</p>
+          </div>
+          <div class="card reveal">
+            <span class="card__icon">💻</span>
+            <h3>Coding for DH</h3>
+            <p>Write and debug scripts for text analysis, scraping finding aids, cleaning datasets, or building visualizations — even if you don't code fluently.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container reveal">
+        <h2>Best practices 🌟</h2>
+        <ul class="steps">
+          <li><strong>Bring the sources.</strong> Claude is most reliable when reasoning over text <em>you provide</em>, not recalling facts from memory. Paste the document; don't ask "what did so-and-so say."</li>
+          <li><strong>Verify everything citable.</strong> Treat every name, date, quotation, and reference as unconfirmed until you've checked it against the original.</li>
+          <li><strong>Ask for uncertainty.</strong> Prompt it to flag low-confidence readings, ambiguous translations, and gaps — then chase those down yourself.</li>
+          <li><strong>Iterate in small steps.</strong> One document, one task at a time beats a giant do-everything prompt. Refine through dialogue.</li>
+          <li><strong>Keep a record.</strong> Note where and how you used AI so your methods stay transparent and reproducible.</li>
+        </ul>
+
+        <h3>A starter prompt</h3>
+        <pre class="prompt">You are helping a historian transcribe a primary source.
+I'll paste an image description / OCR of a 1680s manuscript letter.
+
+Please:
+1. Give your best transcription, preserving original spelling.
+2. Mark any uncertain readings in [brackets] with a note.
+3. List abbreviations you expanded and how.
+Do not guess silently — flag anything you're unsure about.</pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal">
+        <h2>Ethics &amp; limitations 🫶</h2>
+        <p class="lead">The part that matters most for scholarship. Please read before you rely on anything.</p>
+
+        <div class="callout callout--warn">
+          <h3>⚠️ Hallucination is real</h3>
+          <p>Language models can fabricate quotations, citations, archival references, and "facts" that look completely plausible. Never cite anything Claude produces without confirming it in the source itself.</p>
+        </div>
+
+        <div class="callout callout--warn">
+          <h3>⚠️ Verify, then verify again</h3>
+          <p>Transcriptions and translations need checking against the original. The model's confidence is not evidence. You remain the scholar of record for every claim.</p>
+        </div>
+
+        <div class="callout callout--info">
+          <h3>🔒 Privacy &amp; archival sensitivity</h3>
+          <p>Think before pasting unpublished, embargoed, rights-restricted, or personally sensitive material into any cloud tool. Honor repository agreements, copyright, and the dignity of the people in your sources.</p>
+        </div>
+
+        <div class="callout callout--info">
+          <h3>📣 Transparency &amp; bias</h3>
+          <p>Disclose AI assistance per your field's and venue's norms. Be alert to the biases models can carry into how they read, summarize, and frame historical material — especially about marginalized people.</p>
+        </div>
+
+        <p style="margin-top:2rem;">Ready to try it hands-on? <a href="tutorials.html">Head to the tutorials →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/sketch-ambient.js"></script>
+  <script defer src="js/cursor-trail.js"></script>
+  <script defer src="js/components.js"></script>
+</body>
+</html>

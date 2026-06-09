@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutorials &amp; Guides · Agentic Historical Methods</title>
+  <meta name="description" content="Step-by-step guides for historians using Claude: transcription, source analysis, literature synthesis, and DH coding." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="tutorials">
+  <div id="ambient-canvas" aria-hidden="true"></div>
+  <div data-include="nav"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Hands-on 🧁</span>
+        <h1>Tutorials &amp; Guides</h1>
+        <p class="lead">Practical, copy-paste-friendly walkthroughs. Each one assumes you've read the <a href="claude-for-historians.html">ethics &amp; limitations</a> — verification is built into every step.</p>
+
+        <!-- Quick jump cards -->
+        <div class="grid" style="margin-top:2rem;">
+          <a class="card card--link reveal" href="#transcription"><span class="card__icon">✍️</span><h3>Transcribing a source</h3><p>From a tricky manuscript image to a checked transcription.</p></a>
+          <a class="card card--link reveal" href="#analysis"><span class="card__icon">🔎</span><h3>Analyzing primary sources</h3><p>Extract structured data and patterns from a document set.</p></a>
+          <a class="card card--link reveal" href="#literature"><span class="card__icon">📚</span><h3>Literature synthesis</h3><p>Map a historiographical debate from readings you provide.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <article class="guide reveal" id="transcription">
+          <h2>✍️ Transcribing a difficult source</h2>
+          <p>Use Claude to get a first pass on hard handwriting or degraded print, then verify line by line.</p>
+          <ol class="steps">
+            <li>Photograph or scan the source at high resolution. If using OCR first, paste the raw OCR text too.</li>
+            <li>Give Claude context: date, language, hand/typeface, and any known abbreviations.</li>
+            <li>Ask for a transcription that preserves original spelling and <strong>brackets uncertain readings</strong>.</li>
+            <li>Open the image beside the output and correct every bracketed and suspicious passage.</li>
+            <li>Save both the corrected transcription and a note of what Claude got wrong — it's good methods documentation.</li>
+          </ol>
+          <h3>Prompt</h3>
+          <pre class="prompt">I'm transcribing a [1680s English manuscript, secretary hand].
+Here is an image description / OCR of the page: [paste]
+
+Transcribe it, preserving original spelling and punctuation.
+- Put any uncertain reading in [brackets] with a one-word note.
+- List every abbreviation you expanded.
+- Do NOT silently guess; flag low-confidence lines.</pre>
+          <div class="callout callout--warn"><p>✦ Never publish a transcription you haven't checked against the original image yourself.</p></div>
+        </article>
+
+        <article class="guide reveal" id="analysis">
+          <h2>🔎 Analyzing a set of primary sources</h2>
+          <p>Turn a pile of documents into structured, searchable data you can interrogate.</p>
+          <ol class="steps">
+            <li>Decide the variables you care about (e.g. date, place, people named, themes).</li>
+            <li>Paste one source and ask Claude to extract those fields into a table.</li>
+            <li>Refine the schema, then repeat across your set — or ask for a script to batch it.</li>
+            <li>Spot-check rows against the sources; fix systematic errors by tightening the prompt.</li>
+            <li>Ask Claude to summarize patterns <em>as hypotheses to test</em>, not conclusions.</li>
+          </ol>
+          <h3>Prompt</h3>
+          <pre class="prompt">Extract the following from this source into a Markdown table:
+| date | place | people named | document type | key themes |
+
+Source: [paste]
+
+If a field is absent, write "n/a". Quote names exactly as written.
+Flag anything ambiguous in a "notes" column.</pre>
+        </article>
+
+        <article class="guide reveal" id="literature">
+          <h2>📚 Synthesizing secondary literature</h2>
+          <p>Map a historiographical conversation from readings <em>you</em> supply — not from the model's memory.</p>
+          <ol class="steps">
+            <li>Gather the texts (PDFs, your notes, or pasted passages). Provide them to Claude.</li>
+            <li>Ask it to summarize each author's argument and intervention in 2–3 sentences.</li>
+            <li>Ask it to map where scholars agree, disagree, and talk past each other.</li>
+            <li>Draft a literature-review paragraph — then rewrite in your voice and re-check every citation.</li>
+          </ol>
+          <h3>Prompt</h3>
+          <pre class="prompt">Here are summaries/excerpts of 5 works on [topic]: [paste]
+
+1. State each author's central argument and what they're arguing against.
+2. Group them into the main positions in the debate.
+3. Note tensions and unanswered questions.
+Use ONLY the texts I provided. If you're missing context, say so.</pre>
+          <div class="callout callout--info"><p>✦ Verify every author, date, and quotation before any of this reaches a draft.</p></div>
+        </article>
+
+        <p class="reveal">More guides land on the <a href="blog.html">blog</a> — that's where new experiments show up first. 🍓</p>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/sketch-ambient.js"></script>
+  <script defer src="js/cursor-trail.js"></script>
+  <script defer src="js/components.js"></script>
+</body>
+</html>

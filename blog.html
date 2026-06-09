@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog · Agentic Historical Methods</title>
+  <meta name="description" content="Notes from the workbench — experiments and reflections on AI-assisted historical research." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="blog">
+  <div id="ambient-canvas" aria-hidden="true"></div>
+  <div data-include="nav"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">From the workbench 🍓</span>
+        <h1>Blog</h1>
+        <p class="lead">Experiments, reflections, and the occasional cautionary tale. <em>(Add posts by dropping a file in <code>blog/</code> and an entry in <code>blog/posts.json</code>.)</em></p>
+
+        <div id="blog-grid" class="grid" style="margin-top:2rem;">
+          <p class="lead">Loading posts…</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/sketch-ambient.js"></script>
+  <script defer src="js/cursor-trail.js"></script>
+  <script defer src="js/components.js"></script>
+  <script defer src="js/blog.js"></script>
+</body>
+</html>

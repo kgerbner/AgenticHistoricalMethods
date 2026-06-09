@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transcribing a 17th-Century Letter with Claude · Agentic Historical Methods</title>
+  <meta name="description" content="A walkthrough of using Claude to help read difficult secretary-hand handwriting — and how I verified every line." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body data-page="blog">
+  <div id="ambient-canvas" aria-hidden="true"></div>
+  <div data-include="nav"></div>
+
+  <main>
+    <section class="section">
+      <div class="container post-body">
+        <p class="post-meta"><a href="../blog.html">← All posts</a> · May 20, 2026</p>
+        <h1>Transcribing a 17th-Century Letter with Claude</h1>
+        <div class="tags" style="margin-bottom:1.5rem;">
+          <span class="tag">tutorial</span><span class="tag">paleography</span><span class="tag">primary sources</span>
+        </div>
+
+        <p class="lead">Secretary hand is the bane of many an early modernist. Here's how I used Claude as a first-pass reader — and why I still checked every word.</p>
+
+        <h2>The setup</h2>
+        <p>I had a high-resolution scan of a 1680s letter. I described the visible text and pasted a rough OCR, then asked Claude for a transcription preserving original spelling, bracketing anything uncertain.</p>
+
+        <pre class="prompt">This is a 1680s English manuscript letter, secretary hand.
+Transcribe preserving original spelling; bracket uncertain readings;
+list expanded abbreviations; flag low-confidence lines explicitly.
+[OCR/description pasted here]</pre>
+
+        <h2>What it got right — and wrong</h2>
+        <p>Claude handled the bulk of the prose well and correctly expanded several common abbreviations. But it confidently "read" a smudged place-name that, against the image, was clearly something else — exactly the kind of plausible error you must catch yourself.</p>
+
+        <div class="callout callout--warn">
+          <h3>The lesson</h3>
+          <p>A first pass is a gift; an unverified transcription is a liability. I corrected against the scan line by line and logged the model's mistakes as part of my methods notes.</p>
+        </div>
+
+        <p style="margin-top:2rem;"><a class="btn btn--ghost" href="../blog.html">← Back to the blog</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <script defer src="../js/main.js"></script>
+  <script defer src="../js/sketch-ambient.js"></script>
+  <script defer src="../js/cursor-trail.js"></script>
+  <script defer src="../js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · Agentic Historical Methods</title>
+  <meta name="description" content="About the historian behind Agentic Historical Methods — research interests, background, and contact." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="about">
+  <div id="ambient-canvas" aria-hidden="true"></div>
+  <div data-include="nav"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Hello 🎀</span>
+        <h1>About</h1>
+
+        <div class="grid" style="grid-template-columns: minmax(0,1fr); gap:2rem; align-items:start;">
+          <div class="reveal">
+            <p class="lead">I'm a historian working at the intersection of the archive and the algorithm. <em>(Replace this with your bio.)</em></p>
+            <p>My research explores [your fields — e.g. early modern history, slavery and religion, the Atlantic world]. Alongside that traditional work, I'm interested in how new AI tools like Claude can support — never supplant — careful historical scholarship. This site collects what I'm learning.</p>
+            <p>I believe in transparent methods, generous citation, and treating the people in our sources with care. If AI is going to be part of the historian's toolkit, we should use it deliberately and teach it honestly.</p>
+            <h3>Research interests</h3>
+            <div class="grid">
+              <div class="card"><span class="card__icon">🗺️</span><h3>Topic one</h3><p>A sentence about this area of your work.</p></div>
+              <div class="card"><span class="card__icon">📚</span><h3>Topic two</h3><p>A sentence about this area of your work.</p></div>
+              <div class="card"><span class="card__icon">💻</span><h3>Digital methods</h3><p>Text analysis, AI-assisted research, and reproducible workflows.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout--info reveal" style="margin-top:2.5rem;">
+          <h3>Get in touch 💌</h3>
+          <p>Questions, collaborations, or just want to swap prompts? Reach me at
+            <a href="mailto:kgerbner@gmail.com">kgerbner@gmail.com</a>, or find me on the links in the footer.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/sketch-ambient.js"></script>
+  <script defer src="js/cursor-trail.js"></script>
+  <script defer src="js/components.js"></script>
+</body>
+</html>
